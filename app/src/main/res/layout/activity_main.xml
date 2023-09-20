@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Switch
+        android:id="@+id/sVibration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E4711E"
+        android:minHeight="48dp"
+        android:text="Vibration"
+        android:textColorLink="@color/orange"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="@+id/bReload"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bShoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="onClickShoot"
+        android:text="@string/bShoot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lRevolver" />
+
+    <Button
+        android:id="@+id/bRoll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Roll"
+        app:layout_constraintBottom_toTopOf="@+id/bShoot"
+        app:layout_constraintEnd_toEndOf="@+id/bShoot"
+        app:layout_constraintStart_toStartOf="@+id/bShoot" />
+
+    <Button
+        android:id="@+id/bReload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="onClickReload"
+        android:text="Reload"
+        app:layout_constraintEnd_toEndOf="@+id/bShoot"
+        app:layout_constraintStart_toStartOf="@+id/bShoot"
+        app:layout_constraintTop_toBottomOf="@+id/bShoot" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/udarnik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="-90"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/udarnik" />
+
+        <ImageView
+            android:id="@+id/kurok"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:rotation="-90"
+            android:scaleX="3"
+            android:scaleY="3"
+            app:layout_constraintBottom_toBottomOf="@id/rebolver_big"
+            app:layout_constraintEnd_toEndOf="@id/rebolver_big"
+            app:layout_constraintStart_toStartOf="@id/rebolver_big"
+            app:layout_constraintTop_toTopOf="@id/rebolver_big"
+            app:srcCompat="@drawable/kurok" />
+
+        <ImageView
+            android:id="@+id/rebolver_big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="-90"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/revolver_big" />
+
+        <ImageView
+            android:id="@+id/baraban"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="-90"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baraban" />
+
+        <Button
+            android:id="@+id/bKurok"
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:alpha="0"
+            android:onClick="onClickShoot"
+            android:text="Button"
+            app:layout_constraintBottom_toBottomOf="@+id/udarnik"
+            app:layout_constraintEnd_toEndOf="@+id/udarnik"
+            app:layout_constraintHorizontal_bias="0.61"
+            app:layout_constraintStart_toStartOf="@+id/udarnik"
+            app:layout_constraintTop_toTopOf="@+id/udarnik"
+            app:layout_constraintVertical_bias="0.6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lRevolver"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iRevolver"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/irevolver"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/revolver" />
+
+        <ImageView
+            android:id="@+id/iBullet0"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="88dp"
+            android:contentDescription="@string/ibullet0"
+            android:onClick="onClickiBullet"
+            app:layout_constraintBottom_toBottomOf="@+id/iRevolver"
+            app:layout_constraintEnd_toEndOf="@+id/iRevolver"
+            app:layout_constraintStart_toStartOf="@+id/iRevolver"
+            app:layout_constraintTop_toTopOf="@+id/iRevolver"
+            app:srcCompat="@drawable/bullet" />
+
+        <ImageView
+            android:id="@+id/iBullet1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginBottom="45dp"
+            android:contentDescription="@string/ibullet1"
+            android:onClick="onClickiBullet"
+            app:layout_constraintBottom_toBottomOf="@+id/iRevolver"
+            app:layout_constraintEnd_toEndOf="@+id/iRevolver"
+            app:layout_constraintStart_toStartOf="@+id/iRevolver"
+            app:layout_constraintTop_toTopOf="@+id/iRevolver"
+            app:srcCompat="@drawable/bullet" />
+
+        <ImageView
+            android:id="@+id/iBullet2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="75dp"
+            android:contentDescription="@string/ibullet2"
+            android:onClick="onClickiBullet"
+            app:layout_constraintBottom_toBottomOf="@+id/iRevolver"
+            app:layout_constraintEnd_toEndOf="@+id/iRevolver"
+            app:layout_constraintStart_toStartOf="@+id/iRevolver"
+            app:layout_constraintTop_toTopOf="@+id/iRevolver"
+            app:srcCompat="@drawable/bullet" />
+
+        <ImageView
+            android:id="@+id/iBullet3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="88dp"
+            android:contentDescription="@string/ibullet3"
+            android:onClick="onClickiBullet"
+            app:layout_constraintBottom_toBottomOf="@+id/iRevolver"
+            app:layout_constraintEnd_toEndOf="@+id/iRevolver"
+            app:layout_constraintStart_toStartOf="@+id/iRevolver"
+            app:layout_constraintTop_toTopOf="@+id/iRevolver"
+            app:srcCompat="@drawable/bullet" />
+
+        <ImageView
+            android:id="@+id/iBullet4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="45dp"
+            android:contentDescription="@string/ibullet4"
+            android:onClick="onClickiBullet"
+            app:layout_constraintBottom_toBottomOf="@+id/iRevolver"
+            app:layout_constraintEnd_toEndOf="@+id/iRevolver"
+            app:layout_constraintStart_toStartOf="@+id/iRevolver"
+            app:layout_constraintTop_toTopOf="@+id/iRevolver"
+            app:srcCompat="@drawable/bullet" />
+
+        <ImageView
+            android:id="@+id/iBullet5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginBottom="45dp"
+            android:contentDescription="@string/ibullet5"
+            android:onClick="onClickiBullet"
+            app:layout_constraintBottom_toBottomOf="@+id/iRevolver"
+            app:layout_constraintEnd_toEndOf="@+id/iRevolver"
+            app:layout_constraintStart_toStartOf="@+id/iRevolver"
+            app:layout_constraintTop_toTopOf="@+id/iRevolver"
+            app:srcCompat="@drawable/bullet" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

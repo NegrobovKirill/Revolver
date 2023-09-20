@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Revolver</string>
+    <string name="bShoot">Shoot</string>
+    <string name="irevolver">iRevolver</string>
+    <string name="ibullet0">iBullet0</string>
+    <string name="ibullet1">iBullet1</string>
+    <string name="ibullet2">iBullet2</string>
+    <string name="ibullet3">iBullet3</string>
+    <string name="ibullet4">iBullet4</string>
+    <string name="ibullet5">iBullet5</string>
+</resources>
